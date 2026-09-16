@@ -959,7 +959,7 @@ case $host in
   # os2-emx = OS/2 with some Unix fun; so p.ex. buffer works.
   # Till we sorted out the assembler troubles, generic CPU is default.
   i386-pc-os2-emx)
-    cpu_type=generic_fpu
+    cpu_type=x86
     newoldwritesample=enabled
   ;;
   x86_64-pc-os2-emx)
@@ -967,7 +967,8 @@ case $host in
     cpu_type=generic_fpu
   ;;
   *-pc-os2-emx)
-    cpu_type="generic_fpu"
+    cpu_type="x86"
+    newoldwritesample=enabled
   ;;
   *-dec-osf*)
     cpu_type="generic_fpu"
