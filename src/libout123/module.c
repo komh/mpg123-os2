@@ -125,6 +125,29 @@ mpg123_module_t* open_module_here( const char *dir, const char* type
 
 	/* Open the module */
 	handle = INT123_compat_dlopen(module_path);
+#ifdef __OS2__
+	/* Hack for 8.3 limitation on OS/2 */
+	if (handle==NULL)
+	{
+		char *nameext = _getname(module_path);
+		int nameext_len = strlen(nameext);
+		int ext_len = strlen(LT_MODULE_EXT);
+
+		if (strncmp(nameext, "output_os2_kai", 14) == 0)
+		{
+			/* Try out_kai for output_os2_kai */
+			snprintf(nameext, nameext_len, "out_kai%s", LT_MODULE_EXT);
+		}
+		else if (nameext_len - ext_len > 8)
+		{
+			/* Truncate name up to 8 chars */
+			strcpy(nameext + 8, LT_MODULE_EXT);
+		}
+		if(verbose > 1)
+			fprintf(stderr, "Module path: %s\n", module_path );
+		handle = INT123_compat_dlopen(module_path);
+	}
+#endif
 	free(module_path);
 	if (handle==NULL)
 	{
@@ -237,9 +260,23 @@ int INT123_list_modules( const char *type, char ***names, char ***descr, int ver
 		mpg123_module_t *module = NULL;
 		char* ext;
 		size_t name_len;
+#ifdef __OS2__
+		char fname[PATH_MAX];
+		char *saved_filename = NULL;
+#endif
 
 		/* Various checks as loop shortcuts, avoiding too much nesting. */
 		debug1("checking entry: %s", filename);
+
+#ifdef __OS2__
+		/* Hack for 8.3 limitation on OS/2 */
+		if(strcmp(filename,"out_kai" LT_MODULE_EXT) == 0)
+		{
+			saved_filename = filename;
+			strcpy(fname, "output_os2_kai" LT_MODULE_EXT);
+			filename = fname;
+		}
+#endif
 
 		name_len = strlen(filename);
 		if(name_len < strlen(LT_MODULE_EXT))
@@ -293,6 +330,10 @@ int INT123_list_modules( const char *type, char ***names, char ***descr, int ver
 			INT123_close_module(module, verbose);
 		}
 list_modules_continue:
+#ifdef __OS2__
+		if(saved_filename != NULL)
+			filename = saved_filename;
+#endif
 		free(filename);
 	}
 	INT123_compat_dirclose(dir);
