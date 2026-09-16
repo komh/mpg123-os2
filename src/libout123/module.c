@@ -159,7 +159,7 @@ mpg123_module_t* open_module_here( const char *dir, const char* type
 	/* Work out the symbol name */
 	module_symbol_len = strlen( MODULE_SYMBOL_PREFIX ) +
 						strlen( type )  +
-						strlen( MODULE_SYMBOL_SUFFIX ) + 1;
+						strlen( MODULE_SYMBOL_SUFFIX ) + 1 + 1/* for '_' */;
 	module_symbol = malloc(module_symbol_len);
 	if (module_symbol == NULL) {
 		if(verbose > -1)
@@ -171,6 +171,15 @@ mpg123_module_t* open_module_here( const char *dir, const char* type
 	
 	/* Get the information structure from the module */
 	module = (mpg123_module_t*)INT123_compat_dlsym(handle, module_symbol);
+#ifdef __OS2__
+	/* OS/2 kLIBC prepends '_' prefix to symbols */
+	if (module == NULL) {
+		snprintf( module_symbol, module_symbol_len, "_%s%s%s", MODULE_SYMBOL_PREFIX, type, MODULE_SYMBOL_SUFFIX );
+		debug1( "Module symbol: %s", module_symbol );
+		/* Get the information structure from the module with '_' prefix */
+		module = (mpg123_module_t*)INT123_compat_dlsym(handle, module_symbol);
+	}
+#endif
 	free( module_symbol );
 	if (module==NULL) {
 		if(verbose > -1)
