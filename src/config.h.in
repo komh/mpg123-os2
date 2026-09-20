@@ -67,7 +67,7 @@
 /* Define to 1 if you have the <asm/audioio.h> header file. */
 #undef HAVE_ASM_AUDIOIO_H
 
-/* Define to 1 if you have the `atoll' function. */
+/* Define to 1 if you have the 'atoll' function. */
 #undef HAVE_ATOLL
 
 /* Define to 1 if you have the <audios.h> header file. */
@@ -82,13 +82,13 @@
 /* Define to 1 if you have the <byteswap.h> header file. */
 #undef HAVE_BYTESWAP_H
 
-/* Define to 1 if you have the `clock_gettime' function. */
+/* Define to 1 if you have the 'clock_gettime' function. */
 #undef HAVE_CLOCK_GETTIME
 
 /* Define to 1 if you have the <CoreServices/CoreServices.h> header file. */
 #undef HAVE_CORESERVICES_CORESERVICES_H
 
-/* Define to 1 if you have the `ctermid' function. */
+/* Define to 1 if you have the 'ctermid' function. */
 #undef HAVE_CTERMID
 
 /* Define to 1 if you have the <CUlib.h> header file. */
@@ -97,43 +97,46 @@
 /* Define to 1 if you have the <dirent.h> header file. */
 #undef HAVE_DIRENT_H
 
-/* Define to 1 if you have the `dlclose' function. */
+/* Define to 1 if you have the 'dlclose' function. */
 #undef HAVE_DLCLOSE
 
 /* Define to 1 if you have the <dlfcn.h> header file. */
 #undef HAVE_DLFCN_H
 
-/* Define to 1 if you have the `dlopen' function. */
+/* Define to 1 if you have the 'dlopen' function. */
 #undef HAVE_DLOPEN
 
-/* Define to 1 if you have the `dlsym' function. */
+/* Define to 1 if you have the 'dlsym' function. */
 #undef HAVE_DLSYM
 
-/* Define to 1 if you have the `execvp' function. */
+/* Define to 1 if you have the 'execvp' function. */
 #undef HAVE_EXECVP
 
-/* Define to 1 if you have the `fork' function. */
+/* Define to 1 if you have the 'fork' function. */
 #undef HAVE_FORK
 
-/* Define to 1 if you have the `getaddrinfo' function. */
+/* Define to 1 if you have the 'getaddrinfo' function. */
 #undef HAVE_GETADDRINFO
 
-/* Define to 1 if you have the `getuid' function. */
+/* Define to 1 if you have the 'getuid' function. */
 #undef HAVE_GETUID
 
 /* Define to 1 if you have the <inttypes.h> header file. */
 #undef HAVE_INTTYPES_H
 
-/* Define to 1 if you have the `iswprint' function. */
+/* Define to 1 if you have the 'iswprint' function. */
 #undef HAVE_ISWPRINT
+
+/* Define to 1 if you have the <kai.h> header file. */
+#undef HAVE_KAI_H
 
 /* Define to 1 if you have the <langinfo.h> header file. */
 #undef HAVE_LANGINFO_H
 
-/* Define to 1 if you have the `m' library (-lm). */
+/* Define to 1 if you have the 'm' library (-lm). */
 #undef HAVE_LIBM
 
-/* Define to 1 if you have the `mx' library (-lmx). */
+/* Define to 1 if you have the 'mx' library (-lmx). */
 #undef HAVE_LIBMX
 
 /* Define to 1 if you have the <linux/soundcard.h> header file. */
@@ -142,19 +145,19 @@
 /* Define to 1 if you have the <locale.h> header file. */
 #undef HAVE_LOCALE_H
 
-/* Define to 1 if you have the `lseek64' function. */
+/* Define to 1 if you have the 'lseek64' function. */
 #undef HAVE_LSEEK64
 
 /* Define to 1 if you have the <machine/soundcard.h> header file. */
 #undef HAVE_MACHINE_SOUNDCARD_H
 
-/* Define to 1 if you have the `mbstowcs' function. */
+/* Define to 1 if you have the 'mbstowcs' function. */
 #undef HAVE_MBSTOWCS
 
-/* Define to 1 if you have the `mkfifo' function. */
+/* Define to 1 if you have the 'mkfifo' function. */
 #undef HAVE_MKFIFO
 
-/* Define to 1 if you have the `mmap' function. */
+/* Define to 1 if you have the 'mmap' function. */
 #undef HAVE_MMAP
 
 /* Define to 1 if you have the <netdb.h> header file. */
@@ -166,7 +169,7 @@
 /* Define to 1 if you have the <netinet/tcp.h> header file. */
 #undef HAVE_NETINET_TCP_H
 
-/* Define to 1 if you have the `nl_langinfo' function. */
+/* Define to 1 if you have the 'nl_langinfo' function. */
 #undef HAVE_NL_LANGINFO
 
 /* Define to 1 if you have the <OpenAL/alc.h> header file. */
@@ -184,40 +187,40 @@
 /* Define if O_LARGEFILE flag for open(2) exists. */
 #undef HAVE_O_LARGEFILE
 
-/* Define to 1 if you have the `random' function. */
+/* Define to 1 if you have the 'random' function. */
 #undef HAVE_RANDOM
 
 /* Define to 1 if you have the <sched.h> header file. */
 #undef HAVE_SCHED_H
 
-/* Define to 1 if you have the `sched_setscheduler' function. */
+/* Define to 1 if you have the 'sched_setscheduler' function. */
 #undef HAVE_SCHED_SETSCHEDULER
 
-/* Define to 1 if you have the `setenv' function. */
+/* Define to 1 if you have the 'setenv' function. */
 #undef HAVE_SETENV
 
-/* Define to 1 if you have the `setlocale' function. */
+/* Define to 1 if you have the 'setlocale' function. */
 #undef HAVE_SETLOCALE
 
 /* for Win/DOS system with setmode() */
 #undef HAVE_SETMODE
 
-/* Define to 1 if you have the `setpriority' function. */
+/* Define to 1 if you have the 'setpriority' function. */
 #undef HAVE_SETPRIORITY
 
-/* Define to 1 if you have the `setuid' function. */
+/* Define to 1 if you have the 'setuid' function. */
 #undef HAVE_SETUID
 
-/* Define to 1 if you have the `shmat' function. */
+/* Define to 1 if you have the 'shmat' function. */
 #undef HAVE_SHMAT
 
-/* Define to 1 if you have the `shmctl' function. */
+/* Define to 1 if you have the 'shmctl' function. */
 #undef HAVE_SHMCTL
 
-/* Define to 1 if you have the `shmdt' function. */
+/* Define to 1 if you have the 'shmdt' function. */
 #undef HAVE_SHMDT
 
-/* Define to 1 if you have the `shmget' function. */
+/* Define to 1 if you have the 'shmget' function. */
 #undef HAVE_SHMGET
 
 /* Define to 1 if you have the <signal.h> header file. */
@@ -232,10 +235,10 @@
 /* Define to 1 if you have the <stdlib.h> header file. */
 #undef HAVE_STDLIB_H
 
-/* Define to 1 if you have the `strerror' function. */
+/* Define to 1 if you have the 'strerror' function. */
 #undef HAVE_STRERROR
 
-/* Define to 1 if you have the `strerror_l' function. */
+/* Define to 1 if you have the 'strerror_l' function. */
 #undef HAVE_STRERROR_L
 
 /* Define to 1 if you have the <strings.h> header file. */
@@ -244,10 +247,10 @@
 /* Define to 1 if you have the <string.h> header file. */
 #undef HAVE_STRING_H
 
-/* Define to 1 if you have the `strtok_r' function. */
+/* Define to 1 if you have the 'strtok_r' function. */
 #undef HAVE_STRTOK_R
 
-/* Define to 1 if you have the `strtok_s' function. */
+/* Define to 1 if you have the 'strtok_s' function. */
 #undef HAVE_STRTOK_S
 
 /* Define to 1 if you have the <sun/audioio.h> header file. */
@@ -304,19 +307,19 @@
 /* Define to 1 if you have the <unistd.h> header file. */
 #undef HAVE_UNISTD_H
 
-/* Define to 1 if you have the `unsetenv' function. */
+/* Define to 1 if you have the 'unsetenv' function. */
 #undef HAVE_UNSETENV
 
-/* Define to 1 if you have the `uselocale' function. */
+/* Define to 1 if you have the 'uselocale' function. */
 #undef HAVE_USELOCALE
 
 /* Define to 1 if you have the <wchar.h> header file. */
 #undef HAVE_WCHAR_H
 
-/* Define to 1 if you have the `wcstombs' function. */
+/* Define to 1 if you have the 'wcstombs' function. */
 #undef HAVE_WCSTOMBS
 
-/* Define to 1 if you have the `wcswidth' function. */
+/* Define to 1 if you have the 'wcswidth' function. */
 #undef HAVE_WCSWIDTH
 
 /* Define to 1 if you have the <wctype.h> header file. */
@@ -464,10 +467,10 @@
 /* Define for calculating tables at runtime. */
 #undef RUNTIME_TABLES
 
-/* The size of `off_t', as computed by sizeof. */
+/* The size of 'off_t', as computed by sizeof. */
 #undef SIZEOF_OFF_T
 
-/* Define to 1 if all of the C90 standard headers exist (not just the ones
+/* Define to 1 if all of the C89 standard headers exist (not just the ones
    required in a freestanding environment). This macro is provided for
    backward compatibility; new code need not use it. */
 #undef STDC_HEADERS
@@ -520,10 +523,10 @@
 /* Windows Vista and later APIs */
 #undef _WIN32_WINNT
 
-/* Define to empty if `const' does not conform to ANSI C. */
+/* Define to empty if 'const' does not conform to ANSI C. */
 #undef const
 
-/* Define to `__inline__' or `__inline' if that's what the C compiler
+/* Define to '__inline__' or '__inline' if that's what the C compiler
    calls it, or to nothing if 'inline' is not supported under any name.  */
 #ifndef __cplusplus
 #undef inline
